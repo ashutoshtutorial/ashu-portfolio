@@ -8,8 +8,9 @@
 /* Body */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #e0f7ff; /* Sky blue background */
   color: #333;
+  min-height: 100vh;
 }
 
 /* Navbar */
@@ -105,11 +106,13 @@ header {
 h1 {
   margin: 0;
   font-size: 2.5em;
+  color: #ffcc00; /* Yellow heading */
 }
 
 h2 {
   color: #2c3e50;
   margin-top: 40px;
+  font-size: 1.8em;
 }
 
 /* Lists & Links */
@@ -122,6 +125,11 @@ a {
   color: #2980b9;
   text-decoration: none;
   margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1abc9c;
 }
 
 /* Footer */
@@ -136,4 +144,51 @@ footer {
 img {
   border-radius: 10px;
   max-width: 200px;
+}
+
+/* ✅ Responsive Design */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  header {
+    padding: 40px 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  .profile-img {
+    width: 100px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  a {
+    display: inline-block;
+    margin: 5px 5px;
+  }
 }
